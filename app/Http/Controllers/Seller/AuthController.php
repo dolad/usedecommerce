@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Seller;
+
 use App\Http\Controllers\ResponseController as ResponseController;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
