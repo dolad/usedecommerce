@@ -15,7 +15,7 @@
 //     return view('welcome');
 // });
 
-Route::get(
-    '{uri}',
-    '\\'.Pallares\LaravelNuxt\Controllers\NuxtController::class
-)->where('uri', '.*');
+// Route::get(
+//     '{uri}',
+//     '\\'.Pallares\LaravelNuxt\Controllers\NuxtController::class
+// )->where('uri', '.*');
