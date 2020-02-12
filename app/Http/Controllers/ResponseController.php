@@ -39,7 +39,7 @@ class ResponseController extends Controller
         ];
 
         if(!empty($errorMessage)){
-            $response['data']=$errorMessage;
+            $response['error']=$errorMessage;
         }
 
         return response()->json($response, $code);

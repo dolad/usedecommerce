@@ -26,9 +26,11 @@ class AuthController extends ResponseController
             'c_password' => 'required|same:password',
          ]);
 
+
          if($validator->fails()){
-             return $this->sendResponse("Validation Error", $validator->errors());
+             return $this->sendError("Validation Error", $validator->errors());
          }
+
          $user=User::create([
              'name'=>$request->name,
              'email'=>$request->email,
@@ -68,7 +70,7 @@ class AuthController extends ResponseController
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request http://localhost:3000 $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)

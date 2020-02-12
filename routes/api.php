@@ -33,6 +33,7 @@ Route::post('/login','Seller\AuthController@login');
 // Route group for authenticated user
 Route::group(['prefix'=>'sellers/v1','middleware'=>'auth:api'],function(){
 
+     Route::get('/sellers','Seller\SellerController@index');
      Route::resource('category','Seller\CategoryController');
      Route::resource('product','Seller\ProductController');
 
